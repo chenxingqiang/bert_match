@@ -2,10 +2,10 @@
 
 ### 数据构建准备过程测试
 #### step 1 : 切割数据
-      $ python indexes.py --data_path /home/chenxingqiang/_recall_bert/user_to_room_bert_latest_month_sample/20210419 --save_path ./data/ --date 20210419
-      $  nohup python indexes.py --data_path /home/chenxingqiang/_recall_bert/user_to_room_bert_latest_month_sample/20210419 --save_path ./data/ --date 20210419 >> 20210419_indexes.log 2>&1
+      $ python indexes.py --data_path /home/chenxingqiang/_recall_bert/bert_latest_month_sample/20210419 --save_path ./data/ --date 20210419
+      $  nohup python indexes.py --data_path /home/chenxingqiang/bert_match/bert_latest_month_sample/20210419 --save_path ./data/ --date 20210419 >> 20210419_indexes.log 2>&1
 
-#### step 2 : 生成全局
+#### step 2 : 生成全局词表
       $ ./run_gen_all_vocab.sh 20210419-user_items-refine-0-all
  
 #### step 3 : 单次生成 tfrecord 训练样本
